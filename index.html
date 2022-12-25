@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen-wrapper">
+          <div id="screen">
+            <div id="expression"><span id="typed-cursor"/></div>
+            <div id="result">0</div>
+          </div>
+        </div>
+        <table class="keys">
+          <tbody>
+            <tr>
+              <td class="red key" data-func="clear">C</td>
+              <td class="red key" data-func="cancel_entry">CE</td>
+              <td class="gray key power" data-token="op_pow">x<span>y</span></td>
+              <td class="gray key divide" data-token="op_divide">&divide;</td>
+            </tr>
+            <tr>
+              <td class="blue key" data-token="num_7">7</td>
+              <td class="blue key" data-token="num_8">8</td>
+              <td class="blue key" data-token="num_9">9</td>
+              <td class="gray key" data-token="op_multiply">&times;</td>
+            </tr>
+            <tr>
+              <td class="blue key" data-token="num_4">4</td>
+              <td class="blue key" data-token="num_5">5</td>
+              <td class="blue key" data-token="num_6">6</td>
+              <td class="gray key substract" data-token="op_substract">&ndash;</td>
+            </tr>
+            <tr>
+              <td class="blue key" data-token="num_1">1</td>
+              <td class="blue key" data-token="num_2">2</td>
+              <td class="blue key" data-token="num_3">3</td>
+              <td class="gray key add" data-token="op_add" rowspan="2">+</td>
+            </tr>
+            <tr>
+              <td class="blue key" data-token="num_dot">.</td>
+              <td class="blue key" data-token="num_0">0</td>
+              <td class="blue key eval" data-func="eval">=</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="footer">Electronic Calculator</p>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>

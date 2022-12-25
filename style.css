@@ -1,0 +1,151 @@
+html {
+    width:100%;
+    height: 100%; 
+    padding:0;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body {
+    padding:0;
+    margin:0;
+    background-image: linear-gradient( to right, rgb(189, 195, 199) 0%, rgb(236, 240, 241) 40%, rgb(236, 240, 241) 60%, rgb(189, 195, 199) 100%);
+  }
+  
+  .calculator {
+    width: 250px;
+    background-color: rgb(44, 62, 80);
+    background-image: linear-gradient( to right, rgb(51, 75, 99) 0%, rgb(75, 101, 128) 40%, rgb(75, 101, 128) 60%, rgb(51, 75, 99) 100%);
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.6);
+    border-bottom-color: black;
+    border-right-color: black;
+    border-left-color: black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), inset 0 0 3px 4px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Screen
+  -------------------------------*/
+  
+  .screen-wrapper {
+      margin: 15px;
+      padding: 3px;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+  }
+  
+  #screen {
+      height: 60px;
+      background-image: linear-gradient(to bottom, rgb(255, 204, 0) 0%, rgb(255, 222, 116) 100%);
+      border-radius: 30%/7%;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+      padding: 8px 5px;
+  }
+  
+  #expression {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  
+  #result {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 28px;
+      text-align: right;
+      margin-top: 10px;
+      white-space: nowrap;
+  }
+  
+  #typed-cursor {
+    border-right: 3px solid black;
+    height: 14px;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+      from, to {
+          border-color: transparent;
+      }
+      50% {
+         border-color: black;
+      }
+  }
+  
+  .keys {
+    width: 100%;
+    border-spacing: 12px;
+  }
+  
+  .key {
+    width:25%;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(236, 240, 241);
+    font-size: 18px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-left-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease-out;
+    
+    &:hover {
+      border: 3px solid rgba(226, 154, 26, 0.6);
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7), inset 0 0 6px rgba(0, 0, 0, 0.4);
+      color: rgba(226, 170, 26, 1);
+      text-shadow: 0 0 10px rgba(255, 218, 153, 1);
+    }
+    
+    &.red {
+      background-image: linear-gradient( to bottom, rgb(150, 52, 52) 0%, rgb(190, 77, 77) 50%, rgb(150, 52, 52) 100%);
+    }
+    
+    &.blue {
+      background-image: linear-gradient( to bottom, rgb(44, 62, 80) 0%, rgb(58, 80, 102) 50%, rgb(44, 62, 80) 100%);
+    }
+    
+    &.gray {
+      background-image: linear-gradient( to bottom, rgb(110, 133, 151) 0%, rgb(130, 155, 175) 50%, rgb(110, 133, 151) 100%);
+    }
+    
+    &.substract,
+    &.divide,
+    &.add,
+    &.eval {
+      font-size: 28px;
+      line-height: 18px;
+    }
+    
+    &.substract {
+      vertical-align: top;
+    }
+    
+    span {
+      font-size: 10px;
+      vertical-align: top;
+    }
+  }
+  
+  .footer {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.17);
+  }
